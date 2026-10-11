@@ -13,6 +13,17 @@ description: Flows and information architecture block of the UCD toolkit. Produc
 
 **Minimum context:** the product and platform, who the user is for this flow, the task or goal to map, existing screens or navigation that must be respected.
 
+### Ask with a clickable form
+
+Ask the questions below as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Skip any already answered by the brief or the conversation. If the tool is not available, use numbered options in text. Ask the rest of the minimum context in plain text.
+
+| Question | Options | Multi-select |
+|---|---|---|
+| Which outputs do you need? | User flows · Sitemap or navigation model · Screen inventory · Task analysis | yes |
+| What is the starting point? | Personas and goals · Existing screens or navigation to respect · A description only | no |
+| Where should diagrams go? | Markdown file (Mermaid) · FigJam · Both | no |
+| Which platform? | Mobile · Web · Desktop · Other device | no |
+
 ## Method
 
 1. **Scope.** List the key tasks. If personas exist, derive tasks from their goals and jobs to be done; confirm the priority order with the user before detailing more than three flows.

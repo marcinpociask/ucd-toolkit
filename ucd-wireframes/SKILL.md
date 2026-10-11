@@ -13,6 +13,17 @@ description: Wireframes block of the UCD toolkit. Turns flows or a described tas
 
 **Minimum context:** platform and viewport(s), who the user is and what they are trying to do, which screens or flow to wireframe, where the result should go (written spec, Figma, or both).
 
+### Ask with a clickable form
+
+Ask the questions below as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Skip any already answered by the brief or the conversation. If the tool is not available, use numbered options in text. Ask the rest of the minimum context in plain text.
+
+| Question | Options | Multi-select |
+|---|---|---|
+| What is the source? | Flows or screen inventory · Existing screens or sketches · A description only | no |
+| Which viewports? | Mobile · Tablet · Desktop · Other device | yes |
+| Where should the result go? | Written spec · Figma frames · Both | no |
+| How many layout options? | Two for key screens (Recommended) · One per screen | no |
+
 ## Method
 
 1. **Confirm scope**: list the screens and states you will produce before producing them.

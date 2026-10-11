@@ -13,9 +13,22 @@ description: UX research block of the UCD toolkit. Plans research (goals, method
 
 **Minimum context:** what the product is, who the users are, what decision this research should inform, what material already exists.
 
+### Ask with a clickable form
+
+Ask the questions below as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Skip any already answered by the brief or the conversation. If the tool is not available, use numbered options in text. Ask the rest of the minimum context in plain text.
+
+| Question | Options | Multi-select |
+|---|---|---|
+| What do you need? | Plan research · Synthesise existing material · Desk research | no |
+| Plan: which methods are feasible? | User interviews · Survey · Usability test · Competitive review | yes |
+| Plan: which instruments should I produce? | Interview guide · Survey · Screener · Usability test script | yes |
+| Synthesise: what kind of material is it? | Interview notes or transcripts · Survey results · Reviews or support tickets · Analytics | yes |
+
+Ask only the rows that match the chosen mode.
+
 ## Pick the mode
 
-Ask which one applies if it is not obvious from the request.
+Use the form answer, or the request itself when it already makes the mode obvious.
 
 ### Plan
 - Turn the decision to be informed into 3–6 research questions.

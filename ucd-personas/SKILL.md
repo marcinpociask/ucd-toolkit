@@ -13,6 +13,17 @@ description: Personas block of the UCD toolkit. Builds or updates personas with 
 
 **Minimum context:** what the product is, what is known about users and from which sources, how many personas are useful (default 2–4), whether personas already exist that should be revised instead of replaced.
 
+### Ask with a clickable form
+
+Ask the questions below as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Skip any already answered by the brief or the conversation. If the tool is not available, use numbered options in text. Ask the rest of the minimum context in plain text.
+
+| Question | Options | Multi-select |
+|---|---|---|
+| How many personas? | Let the data decide (Recommended) · 2 · 3 · 4 | no |
+| What are they based on? | Research evidence · Mix of research and assumptions · Assumptions only (proto-personas) | no |
+| Are there existing personas? | No, create new · Yes, revise them · Yes, add to the set | no |
+| Any extras? | Journey map · Empathy map · No extras | yes |
+
 ## Method
 
 1. **Decide the type.** With research evidence, build evidence-based personas. Without it, build **proto-personas**, title them as such, and list what would need validating.

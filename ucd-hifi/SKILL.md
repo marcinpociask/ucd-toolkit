@@ -13,6 +13,17 @@ description: High-fidelity design block of the UCD toolkit. Takes wireframes or 
 
 **Minimum context:** which screens, the source (wireframes, existing screens, or description), the design system or library to use (or that none exists yet), platform and viewports, accessibility target (default WCAG 2.2 AA).
 
+### Ask with a clickable form
+
+Ask the questions below as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Skip any already answered by the brief or the conversation. If the tool is not available, use numbered options in text. Ask the rest of the minimum context in plain text.
+
+| Question | Options | Multi-select |
+|---|---|---|
+| What is the source? | Wireframes · Existing screens to polish · A description only | no |
+| Which design system? | Existing Figma library · Third-party kit (Material, HIG…) · None yet, propose a foundation | no |
+| Which viewports? | Mobile · Tablet · Desktop · Other device | yes |
+| Which states to cover? | Core: default, loading, empty, error (Recommended) · Interactive: hover, pressed, focus, disabled · Success and confirmation · Dark mode | yes |
+
 ## Method
 
 1. **Read the design system first.** With a Figma connector, pull the file's variables, styles and components before designing. Reuse what exists; never hard-code a value that has a token, and never redraw a component that exists in the library.

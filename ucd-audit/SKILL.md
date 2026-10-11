@@ -15,6 +15,19 @@ Expert-review pass on finished or in-progress design. It complements usability t
 
 **Minimum context:** what to audit (Figma link, current Figma selection, screenshots, or URL), the scope type (component / flow / screen), platform, who the user is and what task they are doing, accessibility target (default WCAG 2.2 AA).
 
+### Ask with a clickable form
+
+Ask the questions below as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Skip any already answered by the brief, the request (e.g. a pasted Figma link) or the conversation. If the tool is not available, use numbered options in text. Ask the rest of the minimum context (the user and their task) in plain text.
+
+| Question | Options | Multi-select |
+|---|---|---|
+| What is the scope? | Screen · Flow · Component | no |
+| What will you give me? | Figma link · Current Figma selection · Screenshots · Live URL | no |
+| Which platform? | Mobile · Web · Desktop · Other device | no |
+| Accessibility target? | WCAG 2.2 AA (Recommended) · WCAG 2.2 AAA · No target defined (audit against AA) | no |
+
+After the report, ask a second form: publish the report as a shareable page (Yes · No), and write findings back to Figma (No · As comments · As annotations).
+
 ## 1. Gather evidence
 
 Use whichever Figma connector tools are available:
