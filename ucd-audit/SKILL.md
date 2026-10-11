@@ -1,0 +1,78 @@
+---
+name: ucd-audit
+description: Post-design audit block of the UCD toolkit. Runs a heuristic evaluation (Nielsen's 10), accessibility checks and design-system consistency review on a Figma component, flow or full screen, or on screenshots or a live URL, and produces severity-rated findings with fixes. Works standalone on any design, with or without ux/PROJECT.md. Use for "audit this screen", "heuristic evaluation", "review this flow", "check this component", "UX review".
+---
+
+# UCD audit
+
+Expert-review pass on finished or in-progress design. It complements usability testing with real users; it does not replace it. Say so in every report.
+
+## Start-up (every run)
+
+1. Look for `ux/PROJECT.md` in the working directory. If it exists, read it, plus `ux/02-personas/README.md` and `ux/03-flows/` so findings can be traced to persona challenges and intended flows.
+2. If it does not exist, run standalone: ask only the minimum context below (skip what the user already said). Offer once to save the answers as `ux/PROJECT.md`.
+3. Missing context is never a blocker. Audit against general heuristics and mark context-dependent judgements `[assumption]`.
+
+**Minimum context:** what to audit (Figma link, current Figma selection, screenshots, or URL), the scope type (component / flow / screen), platform, who the user is and what task they are doing, accessibility target (default WCAG 2.2 AA).
+
+## 1. Gather evidence
+
+Use whichever Figma connector tools are available:
+
+- Screenshot of each frame or component in scope; look at it before judging.
+- Structure and properties: layer metadata, design context, component properties and variants.
+- Variables and styles in use, to detect hard-coded values and off-system components.
+- For flows: prototype connections or the user's stated order of frames. If the order is unclear, ask.
+- Built-in lint or accessibility audit tools, if the connector has them; treat their output as input to your own judgement.
+
+Without Figma access, work from screenshots or the live page and state what could not be inspected (e.g. exact colour values, component structure).
+
+## 2. Evaluate
+
+Read `heuristics.md` in this skill's folder and apply the checklist for the scope type:
+
+- **Component**: states and variants complete, naming and properties, token usage, contrast, target size, content resilience (long text, localisation), consistency with sibling components.
+- **Screen**: all ten heuristics, visual hierarchy, primary action clarity, states, accessibility, consistency with the design system.
+- **Flow**: everything for screens, plus step count, entry and exit points, error recovery, progress and system status across steps, dead ends, consistency of patterns between steps.
+
+When personas exist, walk the task as the primary persona and note where each of their challenge IDs is addressed, ignored or made worse.
+
+Measure where you can (contrast ratios from actual colour values, target sizes from frame dimensions) instead of estimating. If a value is estimated from a screenshot, say so.
+
+## 3. Report
+
+One finding per issue, each with:
+
+| Field | Content |
+|---|---|
+| ID | A-01, A-02… |
+| Location | Frame / layer name, with node link if available |
+| Heuristic | Which one(s) violated, or WCAG criterion |
+| Issue | What is wrong, in one or two sentences |
+| Evidence | What you observed or measured |
+| Severity | 0–4 (scale in `heuristics.md`) |
+| Persona impact | Challenge ID(s), if personas exist |
+| Fix | Concrete, specific recommendation |
+
+Structure of the report:
+
+1. Scope and method (what was inspected, what was not, and the reminder about usability testing)
+2. Summary: counts by severity, top three issues to fix first
+3. What works well (brief, specific)
+4. Findings table, sorted by severity
+5. Quick wins vs. structural changes
+6. Open questions for the designer
+
+Save to `ux/06-audit/<YYYY-MM-DD>-<scope>.md`. Offer to publish the report as a shareable page.
+
+## 4. Optional: write back to Figma
+
+Only after the user agrees, and stating exactly what will be added: pin each finding as a comment or annotation on its frame, prefixed with the finding ID and severity. Never change the design itself during an audit; offer fixes as a follow-up.
+
+## Re-audit
+
+If an earlier report exists for the same scope, compare: which findings are resolved, which remain, what is new.
+
+## Finish
+
+Update the Stage status row in `ux/PROJECT.md` if it exists and give the summary section in chat.
