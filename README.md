@@ -9,11 +9,12 @@ A set of Claude skills that turn a User-Centred Design process into reusable blo
 | `/ucd-kickoff` | Setup | Runs an intake interview, analyses documents, links and Figma files, and writes the project brief |
 | `/ucd-research` | Research | Plans research (interview guides, surveys, screeners) or synthesises raw material into themes and insights |
 | `/ucd-personas` | Personas | Builds personas with goals, behaviours and the challenges they face |
-| `/ucd-flows` | Flows & IA | Task analysis, user flows, navigation model and screen inventory |
+| `/ucd-flows` | Flows & IA | Task analysis, user flows, navigation model and screen inventory, optionally drawn in Figma or FigJam |
 | `/ucd-wireframes` | Wireframes | Low-fidelity specs with states and annotations, optionally built in Figma |
 | `/ucd-hifi` | Hi-fi | High-fidelity screens using the project's design system, plus handoff notes |
 | `/ucd-audit` | Audit | Heuristic evaluation, accessibility checks and design-system consistency review of a component, flow or screen |
 | `/ucd-status` | Any time | Shows where the project stands and recommends the next step |
+| `/ucd-figma-connect` | Any time | Checks the Figma connection and, if needed, guides you step by step through setting up Figma Console MCP |
 
 ## How it works
 
@@ -43,6 +44,9 @@ Each block reads the brief and the output of earlier stages, so context does not
 - Research and personas never invent participants, quotes or statistics. Without real data, output is labelled as assumptions or proto-personas to validate.
 - Anything unverified is marked `[assumption]`.
 - Nothing is written to a Figma file without confirmation, and an audit never changes the design itself.
+- Before the first write, the block names the connected Figma file, so work does not land in a copy or backup by accident.
+- Existing work is built on, not redone. Stages done before the toolkit are recorded as "exists outside toolkit", with a note on what they contain and what is missing.
+- Screens a flow needs but nobody has designed are tagged `not designed`.
 - An audit is an expert review. It complements usability testing with real users and does not replace it.
 
 ## The audit
@@ -74,7 +78,17 @@ git clone https://github.com/marcinpociask/ucd-toolkit.git ~/.claude/skills
 
 The target folder must not exist yet, or must be empty. Restart Claude afterwards. To update later, run `git pull` in that folder.
 
-For the Figma-based blocks (wireframes, hi-fi, audit), connect a Figma MCP connector in Claude. Without one, the audit works from screenshots.
+## Connecting Figma
+
+The Figma-based blocks (flows, wireframes, hi-fi, audit) work with any Figma MCP connector. If none is connected when a block needs one, it asks whether to set one up or continue without Figma (written specs, Mermaid diagrams, audit from screenshots).
+
+To set one up, run:
+
+```
+/ucd-figma-connect
+```
+
+It checks what is already connected, asks a few questions as a clickable form, and walks through the [Figma Console MCP setup](https://docs.figma-console-mcp.southleft.com/setup) one step at a time: access token, MCP server, Desktop Bridge plugin, verification, and confirming which file is the target. You enter your Figma token yourself; the skill never asks for it in chat. Commands and troubleshooting are in [ucd-figma-connect/setup-reference.md](ucd-figma-connect/setup-reference.md).
 
 ## Getting started
 

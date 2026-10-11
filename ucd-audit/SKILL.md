@@ -9,7 +9,7 @@ Expert-review pass on finished or in-progress design. It complements usability t
 
 ## Start-up (every run)
 
-1. Look for `ux/PROJECT.md` in the working directory. If it exists, read it, plus `ux/02-personas/README.md` and `ux/03-flows/` so findings can be traced to persona challenges and intended flows.
+1. Look for `ux/PROJECT.md` in the working directory. If it exists, read it, plus `ux/02-personas/README.md` and `ux/03-flows/` so findings can be traced to persona challenges and intended flows. If personas live outside the toolkit, use the challenge ID table at the top of `ux/03-flows/flows.md` when there is one.
 2. If it does not exist, run standalone: ask only the minimum context below (skip what the user already said). Offer once to save the answers as `ux/PROJECT.md`.
 3. Missing context is never a blocker. Audit against general heuristics and mark context-dependent judgements `[assumption]`.
 
@@ -27,6 +27,16 @@ Ask the questions below as a clickable form with the AskUserQuestion tool (up to
 | Accessibility target? | WCAG 2.2 AA (Recommended) · WCAG 2.2 AAA · No target defined (audit against AA) | no |
 
 After the report, ask a second form: publish the report as a shareable page (Yes · No), and write findings back to Figma (No · As comments · As annotations).
+
+### Figma check
+
+When the source is a Figma link or the current selection, check the connection first: if no Figma tools are available or the status check fails, ask:
+
+| Question | Options |
+|---|---|
+| Figma is not connected. How do you want to continue? | Set up the connection now (Recommended) · Audit from screenshots or exports instead · I will connect it myself, then tell you |
+
+On "Set up the connection now", run the `ucd-figma-connect` skill, then come back here. A read-only connection is enough for an audit. Name the connected file in the report's scope section; if it differs from the file recorded in `ux/PROJECT.md` (a copy, a backup), say so.
 
 ## 1. Gather evidence
 

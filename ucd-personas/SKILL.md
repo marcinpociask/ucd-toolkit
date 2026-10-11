@@ -39,6 +39,10 @@ Ask the questions below as a clickable form with the AskUserQuestion tool (up to
 4. **Index** in `ux/02-personas/README.md`: a comparison table, the primary persona and why, and a challenge list across all personas. Later blocks trace flows, screens and audit findings back to these challenge IDs, so keep IDs stable when revising.
 5. **Optional**, when asked: journey map (stages, actions, thoughts, pain points, opportunities) or empathy map per persona.
 
+## Personas that already exist outside the toolkit
+
+Do not rewrite them. Read them where they are and write only the index, `ux/02-personas/README.md`: the comparison table, the primary persona, and the challenge list with IDs assigned in the order the challenges appear in the source, each pointing back to the source document. Mark which attributes rest on evidence and which were constructed (demographics, daily routines and quotes written for a concept project are assumptions). If `ucd-flows` already assigned IDs in `ux/03-flows/flows.md`, reuse those exactly.
+
 ## Rules
 
 - No invented statistics, quotes or biographical colour presented as fact.

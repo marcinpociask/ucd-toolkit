@@ -13,4 +13,7 @@ description: Shows where a project stands in the UCD toolkit and what to do next
    - Outputs carrying many `[assumption]` markers that later stages rely on
    - Audit findings of severity 3–4 still open
    - Open questions in the brief that block the next stage
+   - Stages marked "exists outside toolkit" whose note says something is thin or missing; name the block that would fill it
+   - Screens listed as "not designed" in `ux/03-flows/screen-inventory.md`
+   - A connected Figma file whose name or key differs from the one in the brief's Design files table (check only if Figma tools are available; if the next step needs Figma and it is not connected, point to `ucd-figma-connect`)
 5. Recommend one next action and the block to run for it. Any block can be run on its own at any time; the order is a default, not a gate.

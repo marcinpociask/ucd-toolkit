@@ -24,9 +24,19 @@ Ask the questions below as a clickable form with the AskUserQuestion tool (up to
 | Where should the result go? | Written spec · Figma frames · Both | no |
 | How many layout options? | Two for key screens (Recommended) · One per screen | no |
 
+### If the result goes to Figma
+
+Check the connection before promising frames: if no Figma tools are available or the status check fails, ask:
+
+| Question | Options |
+|---|---|
+| Figma is not connected. How do you want to continue? | Set up the connection now (Recommended) · Continue with written specs only · I will connect it myself, then tell you |
+
+On "Set up the connection now", run the `ucd-figma-connect` skill, then come back here. With a working connection, state the connected file's name before the first write; if it differs from the file recorded in `ux/PROJECT.md` (a copy, a backup, a library), stop and ask.
+
 ## Method
 
-1. **Confirm scope**: list the screens and states you will produce before producing them.
+1. **Confirm scope**: list the screens and states you will produce before producing them. If `ux/03-flows/screen-inventory.md` lists screens the flows need but nobody has designed, offer those first.
 2. **Spec each screen** in `ux/04-wireframes/<screen>.md`:
    - Purpose and the flow step it serves
    - Content hierarchy, top to bottom, with priority (primary / secondary / tertiary)
@@ -36,7 +46,7 @@ Ask the questions below as a clickable form with the AskUserQuestion tool (up to
    - Which persona challenge IDs it addresses
 3. **Keep it lo-fi**: greyscale, real representative copy in place of lorem ipsum where copy carries meaning, no brand styling. The point is structure and priority.
 4. **Offer two layout options** for the screens that matter most, with the trade-off of each, and recommend one.
-5. **In Figma** (when a connector is available and the user wants it): confirm the target file and page first. Check whether the page or frames already exist before creating. Place frames inside a Section named for the flow, name layers meaningfully, use auto layout, and take a screenshot after creating to verify alignment and spacing; fix and re-check.
+5. **In Figma** (when a connector is available and the user wants it): confirm the target file and page first. Check whether the page or frames already exist before creating. Read the page list and follow its naming pattern (including an emoji or icon prefix if pages use one). If the file has a wireframe kit, reuse its components and annotation styles instead of drawing new ones. Place frames inside a Section named for the flow, name layers meaningfully, use auto layout, and take a screenshot after creating to verify alignment and spacing; fix and re-check.
 
 ## Self-check before handing over
 

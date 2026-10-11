@@ -24,11 +24,21 @@ Ask the questions below as a clickable form with the AskUserQuestion tool (up to
 | Which viewports? | Mobile · Tablet · Desktop · Other device | yes |
 | Which states to cover? | Core: default, loading, empty, error (Recommended) · Interactive: hover, pressed, focus, disabled · Success and confirmation · Dark mode | yes |
 
+### Figma check
+
+Hi-fi work happens in Figma. Before the method, check the connection: if no Figma tools are available or the status check fails, ask:
+
+| Question | Options |
+|---|---|
+| Figma is not connected. How do you want to continue? | Set up the connection now (Recommended) · Continue with handoff notes and specs only · I will connect it myself, then tell you |
+
+On "Set up the connection now", run the `ucd-figma-connect` skill, then come back here. With a working connection, state the connected file's name before the first write; if it differs from the file recorded in `ux/PROJECT.md` (a copy, a backup, a library), stop and ask.
+
 ## Method
 
 1. **Read the design system first.** With a Figma connector, pull the file's variables, styles and components before designing. Reuse what exists; never hard-code a value that has a token, and never redraw a component that exists in the library.
 2. **No design system yet?** Propose a minimal foundation and get agreement before applying it: colour roles (with contrast-checked pairs), type scale, spacing scale, radius, elevation, and the core components the screens need.
-3. **Build the screens**: confirm the target file and page, check for existing frames before creating, use auto layout and component instances, name layers meaningfully, keep frames inside a Section.
+3. **Build the screens**: confirm the target file and page, check for existing frames before creating, follow the file's page and layer naming pattern, use auto layout and component instances, name layers meaningfully, keep frames inside a Section.
 4. **Cover the states** from the wireframe spec (default, loading, empty, error, success, disabled, focus) and the viewports agreed.
 5. **Validate visually**: screenshot after each screen, check alignment, spacing rhythm, hierarchy, contrast and truncation with long content; fix and re-check (up to three passes), then show the user.
 6. **Handoff notes** in `ux/05-hifi/<screen>.md`: tokens and components used, new components or tokens introduced and why, interaction and motion notes, responsive rules, accessibility notes (focus order, labels, contrast results), open questions.
