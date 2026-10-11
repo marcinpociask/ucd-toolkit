@@ -97,3 +97,7 @@ Each skill is a plain Markdown file (`<skill>/SKILL.md`). Edit the instructions,
 ## Author
 
 Marcin Pociask
+
+## License
+
+[MIT](LICENSE)
