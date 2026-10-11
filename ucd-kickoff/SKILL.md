@@ -14,16 +14,44 @@ Create the project brief that the other blocks (`ucd-research`, `ucd-personas`, 
 
 ## 2. Intake interview
 
-Ask in small batches (3–4 questions at a time), skipping anything already answered by documents or the conversation. Accept "don't know yet" and record it as an open question.
+Skip anything already answered by documents or the conversation. Accept "don't know yet" and record it as an open question.
 
-1. **Product** – What is it, in one or two sentences? What platform(s)?
+### Clickable form first
+
+Whenever a question has a predictable set of answers, ask it as a clickable form with the AskUserQuestion tool (up to 4 questions per form, 2–4 options each; the user can always pick "Other" and type). Put the most likely answer first. If the tool is not available, ask the same questions as numbered options in text.
+
+**Form 1 – Project basics**
+
+| Question | Options | Multi-select |
+|---|---|---|
+| What kind of project is this? | New product · Ongoing project · Redesign of an existing product | no |
+| Which platforms? | Mobile (iOS / Android) · Web · Desktop · Other device (tablet, TV, wearable, embedded) | yes |
+| What is the knowledge about users based on? | Real research (interviews, surveys, analytics) · Mix of research and assumptions · Assumptions only · Don't know yet | no |
+| Is there a design system? | Yes, in Figma · Partial (some styles or components) · None yet · Using a third-party kit (Material, HIG…) | no |
+
+**Form 2 – Stage status** (skip for a new product; mark all "not started")
+
+One question each for Research, Personas, Flows & IA, Wireframes: Not started · In progress · Done.
+
+**Form 3 – Hi-fi and priorities**
+
+| Question | Options | Multi-select |
+|---|---|---|
+| Hi-fi mockups status? | Not started · In progress · Done | no |
+| Accessibility target? | WCAG 2.2 AA (Recommended) · WCAG 2.2 AAA · No target defined | no |
+| What material can you share? | Research notes or reports · Personas or journey maps · Figma files · Brief, PRD or other documents | yes |
+| What do you want to do first? | Audit existing designs · Research or personas · Flows or wireframes · Hi-fi design | no |
+
+### Then the open questions
+
+Ask these in plain text, in one message, since they need the user's own words:
+
+1. **Product** – What is it, in one or two sentences?
 2. **Problem** – What problem does it solve, and for whom?
-3. **Users** – Who are the intended users? What is known from evidence vs. assumed?
+3. **Users** – Who are the intended users?
 4. **Goals** – Business goals and success measures.
-5. **Stage** – New project or ongoing? Which UCD stages are done, in progress, or not started?
-6. **Existing material** – Research, personas, flows, design files, design system, analytics, competitor references.
-7. **Constraints** – Deadlines, tech, brand, accessibility target (default WCAG 2.2 AA), languages.
-8. **Immediate need** – What does the user want to get done first?
+5. **Constraints** – Deadlines, tech, brand, languages.
+6. **Locations** – Paths, links or Figma URLs for the material ticked in Form 3.
 
 ## 3. Take in documents
 
